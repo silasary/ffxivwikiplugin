@@ -41,7 +41,7 @@ namespace Silasary.WikiPlugin
                     {
                         var jObject = await XivApi.GetContentFinderCondition(contentFinderConditionId);
                         var name = ((string)jObject["Name"]).Replace(' ', '_');
-                        var url = $"https://ffxiv.consolegameswiki.com/wiki/{name}#Bosses";
+                        var url = $"https://ffxiv.gamerescape.com/wiki/{name}";
                         dalamud.Framework.Gui.Chat.Print($"Launching {url}");
                         Process.Start(new ProcessStartInfo(url)
                         {
